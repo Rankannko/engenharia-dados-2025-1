@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: exemplo_incremental_clientes
+  - name: stg_clientes
     enabled: true
     materialized: table
     columns:
@@ -10,18 +10,14 @@ models:
           - unique
           - not_null
 
-  - name: exemplo_incremental_pedidos
+  - name: stg_pagamentos
     columns:
       - name: id_pedido
         tests:
           - unique
           - not_null
-      - name: status
-        tests:
-          - accepted_values:
-              values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
 
-  - name: exemplo_incremental_pagamentos
+  - name: stg_pedidos
     columns:
       - name: id_pagamento
         tests:

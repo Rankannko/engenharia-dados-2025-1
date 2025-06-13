@@ -1,36 +1,31 @@
 {% set metodos_pagamento = ['credit_card', 'coupon', 'bank_transfer', 'gift_card'] %}
 
 with pedidos as (
-
-    select * from {{ ref('exemplo_incremental_pedidos') }}
-
+    select id_pedido, id_cliente, data_pedido, status 
+    from {{ ref('stg_pedidos') }}
 ),
 
 pagamentos as (
-
-    select * from {{ ref('exemplo_incremental_pagamentos') }}
-
+    select id_pedido, metodo_pagamento, valor_pagamento 
+    from {{ ref('stg_pagamentos') }}
 ),
 
 pagamentos_pedidos as (
-
     select
         id_pedido,
 
         {% for metodo_pagamento in metodos_pagamento -%}
-        sum(case when metodo_pagamento = '{{ payment_method }}' then valor_pagamento else 0 end) as {{ metodo_pagamento }}_valor_pagamento,
+        sum(case when metodo_pagamento = '{{ metodo_pagamento }}' then valor_pagamento else 0 end) 
+        as {{ metodo_pagamento }}_valor_pagamento,
         {% endfor -%}
 
         sum(valor_pagamento) as pagamento_total
 
     from pagamentos
-
     group by id_pedido
-
 ),
 
 final as (
-
     select
         pedidos.id_pedido,
         pedidos.id_cliente,
@@ -38,19 +33,14 @@ final as (
         pedidos.status,
 
         {% for metodo_pagamento in metodos_pagamento -%}
-
         pagamentos_pedidos.{{ metodo_pagamento }}_valor_pagamento,
-
         {% endfor -%}
 
-        pagamentos_pedidos.pagamento_total as valor 
+        pagamentos_pedidos.pagamento_total 
 
     from pedidos
-
-
     left join pagamentos_pedidos
         on pedidos.id_pedido = pagamentos_pedidos.id_pedido
-
 )
 
-select * from final
+select * from final;

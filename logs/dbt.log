@@ -1,0 +1,102 @@
+[0m17:16:19.451467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002297EBF6B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229006E2390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229006E2050>]}
+
+
+============================== 17:16:19.460731 | 3f93fdff-f7aa-4a97-87dc-31f0efef9968 ==============================
+[0m17:16:19.460731 [info ] [MainThread]: Running with dbt=1.9.8
+[0m17:16:19.461734 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\jp\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt seed', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:16:19.461734 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:16:19.462733 [debug] [MainThread]: Command `dbt seed` failed at 17:16:19.462733 after 0.06 seconds
+[0m17:16:19.462733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002297A6667D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229006E1890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229006E1F10>]}
+[0m17:16:19.463732 [debug] [MainThread]: Flushing usage events
+[0m17:16:20.535015 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:17:55.390079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A71E2550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A7211390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A72124D0>]}
+
+
+============================== 17:17:55.392080 | 7c155a6e-e6a5-4c38-bac4-55b9afa836d3 ==============================
+[0m17:17:55.392080 [info ] [MainThread]: Running with dbt=1.9.8
+[0m17:17:55.393080 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\jp\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\jp\\Documents\\GitHub\\engenharia-dados-2025-1\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt seed', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:17:55.548741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7c155a6e-e6a5-4c38-bac4-55b9afa836d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A73FCF90>]}
+[0m17:17:55.578741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7c155a6e-e6a5-4c38-bac4-55b9afa836d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A3111290>]}
+[0m17:17:55.578741 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m17:17:55.766938 [debug] [MainThread]: checksum: 2898e47e730fa32147e5ae95c02f42c1d51b8fd2b81922b9b731f0208caf4dff, vars: {}, profile: , target: , version: 1.9.8
+[0m17:17:55.766938 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m17:17:55.767939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7c155a6e-e6a5-4c38-bac4-55b9afa836d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A75FBED0>]}
+[0m17:17:56.582617 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.engenharia_dados_2025_1
+[0m17:17:56.585621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7c155a6e-e6a5-4c38-bac4-55b9afa836d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A76BE450>]}
+[0m17:17:56.646221 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\manifest.json
+[0m17:17:56.655956 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\semantic_manifest.json
+[0m17:17:56.781230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7c155a6e-e6a5-4c38-bac4-55b9afa836d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A7778990>]}
+[0m17:17:56.782019 [info ] [MainThread]: Found 433 macros
+[0m17:17:56.782522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7c155a6e-e6a5-4c38-bac4-55b9afa836d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A77ADA10>]}
+[0m17:17:56.783039 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m17:17:56.783558 [debug] [MainThread]: Command end result
+[0m17:17:56.794100 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\manifest.json
+[0m17:17:56.795642 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\semantic_manifest.json
+[0m17:17:56.797692 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\run_results.json
+[0m17:17:56.797692 [info ] [MainThread]: 
+[0m17:17:56.798207 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:17:56.798721 [info ] [MainThread]: 
+[0m17:17:56.799238 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=0 SKIP=0 TOTAL=0
+[0m17:17:56.799748 [debug] [MainThread]: Command `dbt seed` succeeded at 17:17:56.799748 after 1.46 seconds
+[0m17:17:56.800267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A10667D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A1066790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B7A11BFB50>]}
+[0m17:17:56.800781 [debug] [MainThread]: Flushing usage events
+[0m17:17:57.964931 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:18:14.572930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028307AE2A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028307B379D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028305F26DD0>]}
+
+
+============================== 17:18:14.574929 | a4edbd2d-b104-4f6a-a039-019d3b54e750 ==============================
+[0m17:18:14.574929 [info ] [MainThread]: Running with dbt=1.9.8
+[0m17:18:14.575932 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\jp\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\jp\\Documents\\GitHub\\engenharia-dados-2025-1\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m17:18:14.682024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a4edbd2d-b104-4f6a-a039-019d3b54e750', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028307B3D690>]}
+[0m17:18:14.712136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a4edbd2d-b104-4f6a-a039-019d3b54e750', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000283029B1590>]}
+[0m17:18:14.713136 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m17:18:14.888781 [debug] [MainThread]: checksum: 2898e47e730fa32147e5ae95c02f42c1d51b8fd2b81922b9b731f0208caf4dff, vars: {}, profile: , target: , version: 1.9.8
+[0m17:18:14.950346 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:18:14.951347 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:18:14.951347 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.engenharia_dados_2025_1
+[0m17:18:14.954346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a4edbd2d-b104-4f6a-a039-019d3b54e750', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002830805AE50>]}
+[0m17:18:14.974344 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\manifest.json
+[0m17:18:14.977347 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\semantic_manifest.json
+[0m17:18:15.014353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a4edbd2d-b104-4f6a-a039-019d3b54e750', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028308251250>]}
+[0m17:18:15.014353 [info ] [MainThread]: Found 433 macros
+[0m17:18:15.015352 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m17:18:15.016352 [debug] [MainThread]: Command end result
+[0m17:18:15.025350 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\manifest.json
+[0m17:18:15.027353 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\semantic_manifest.json
+[0m17:18:15.029349 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\run_results.json
+[0m17:18:15.029349 [debug] [MainThread]: Command `dbt build` succeeded at 17:18:15.029349 after 0.50 seconds
+[0m17:18:15.030350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000283019A67D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028301AFFB90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028301AFFB50>]}
+[0m17:18:15.030350 [debug] [MainThread]: Flushing usage events
+[0m17:18:15.921487 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:19:08.791139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019813212850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198131DFB90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198131DFE10>]}
+
+
+============================== 17:19:08.794139 | 0ad0f583-5142-4a72-a449-6206f364f990 ==============================
+[0m17:19:08.794139 [info ] [MainThread]: Running with dbt=1.9.8
+[0m17:19:08.795139 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\jp\\.dbt', 'log_path': 'C:\\Users\\jp\\Documents\\GitHub\\engenharia-dados-2025-1\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt list', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:19:08.900139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0ad0f583-5142-4a72-a449-6206f364f990', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198133FD650>]}
+[0m17:19:08.930141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0ad0f583-5142-4a72-a449-6206f364f990', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001980F2115D0>]}
+[0m17:19:08.931142 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m17:19:09.103441 [debug] [MainThread]: checksum: 2898e47e730fa32147e5ae95c02f42c1d51b8fd2b81922b9b731f0208caf4dff, vars: {}, profile: , target: , version: 1.9.8
+[0m17:19:09.155527 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:19:09.155527 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:19:09.156527 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.engenharia_dados_2025_1
+[0m17:19:09.159527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0ad0f583-5142-4a72-a449-6206f364f990', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019813778510>]}
+[0m17:19:09.179614 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\manifest.json
+[0m17:19:09.182613 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\jp\Documents\GitHub\engenharia-dados-2025-1\target\semantic_manifest.json
+[0m17:19:09.198613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0ad0f583-5142-4a72-a449-6206f364f990', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001981375F6D0>]}
+[0m17:19:09.198613 [warn ] [MainThread]: No nodes selected!
+[0m17:19:09.199613 [debug] [MainThread]: Command `dbt list` succeeded at 17:19:09.199613 after 0.45 seconds
+[0m17:19:09.199613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019813437590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198130EE290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198133DAD90>]}
+[0m17:19:09.200613 [debug] [MainThread]: Flushing usage events
+[0m17:19:09.828362 [debug] [MainThread]: An error was encountered while trying to flush usage events
